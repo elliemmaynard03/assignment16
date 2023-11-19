@@ -111,20 +111,16 @@ const deleteCountry = async(country) => {
 }
 const populateEditForm = (country) => {
     const form = document.getElementById("add-edit-country-form");
-
-    if (form) {
-        form._id.value = country._id || '';
-        form.name.value = country.name || '';
-        form.population.value = country.population || '';
-        form.language.value = country.language || '';
-        form.origin.value = country.origin || '';
-        form.capitol.value = country.capitol || '';
-        form.president.value = country.president || '';
-
-        populateFunfact(country);
-    } else {
-        console.error("Form element not found.");
-    }
+    
+    form._id.value = country._id;
+    form.name.value = country.name;
+    form.name.value = country.population;
+    form.language.value = country.language;
+    form.origin.value = country.origin;
+    form.capitol.value = country.capitol;
+    form.president.value = country.president;
+    form.funfacts.value = country.funfacts;
+    populateFunfact(country)
 };
 
 const populateFunfact = (country) => {
@@ -138,7 +134,7 @@ const populateFunfact = (country) => {
     });
 }
 
-const addEditCountry = async(e, country) => {
+const addEditCountry = async(e) => {
     e.preventDefault();
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
@@ -156,7 +152,7 @@ const addEditCountry = async(e, country) => {
     else {
         console.log(...formData);
 
-        response = await fetch(`https://countries-updated.onrender.com/api/countries/${country._id}`, {
+        response = await fetch(`https://countries-updated.onrender.com/api/countries/${form._id.value}`, {
             method: "PUT",
             body: formData
         });
