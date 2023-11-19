@@ -114,7 +114,7 @@ const populateEditForm = (country) => {
     
     form._id.value = country._id;
     form.name.value = country.name;
-    form.name.value = country.population;
+    form.population.value = country.population;
     form.language.value = country.language;
     form.origin.value = country.origin;
     form.capitol.value = country.capitol;
