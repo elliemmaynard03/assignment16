@@ -1,6 +1,6 @@
 const getCountries = async() => {
     try {
-        return (await fetch("https://countries-updated.onrender.com")).json();
+        return (await fetch("https://countries-updated.onrender.com/api/countries")).json();
     } catch (error) {
         console.log(error);
     }
