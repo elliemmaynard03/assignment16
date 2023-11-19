@@ -48,9 +48,9 @@ const displayDetails = (country) => {
     countryDetails.append(eLink);
     eLink.id = "edit-link";
 
-    const population = document.createElement("p");
-    countryDetails.append(population);
-    population.innerHTML = "Population: "+country.population;
+    // const population = document.createElement("p");
+    // countryDetails.append(population);
+    // population.innerHTML = "Population: "+country.population;
 
     const language = document.createElement("p");
     countryDetails.append(language);
@@ -118,7 +118,7 @@ const populateEditForm = (country) => {
     
     form._id.value = country._id || "";
     form.name.value = country.name || "";
-    form.population.value = country.population !== undefined && country.population !== null ? country.population : "";
+    // form.population.value = country.population !== undefined && country.population !== null ? country.population : "";
     form.language.value = country.language || "";
     form.origin.value = country.origin || "";
     form.capitol.value = country.capitol || "";

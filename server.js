@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 let countries = [{
         _id: 1,
         name: "America",
-        population: "332 million",
+        // population: "332 million",
         language: "English",
         origin: "1776",
         capitol: "Washington D.C",
@@ -35,7 +35,7 @@ let countries = [{
     {
         _id: 2,
         name: "Japan",
-        population: "600 million",
+        // population: "600 million",
         language: "Japanese",
         origin: "1952",
         capitol: "Tokyo",
@@ -55,7 +55,7 @@ let countries = [{
        {
         _id: 4,
         name: "Australia",
-        population: "200 million",
+        // population: "200 million",
         language: "English",
         origin: "1986",
         capitol: "Canberra",
@@ -65,7 +65,7 @@ let countries = [{
        {
         _id: 5,
         name: "Russia",
-        population: "140 million",
+        // population: "140 million",
         language: "Ukrainian",
         origin: "1991",
         capitol: "Moscow",
@@ -75,7 +75,7 @@ let countries = [{
        {
         _id: 6,
         name: "Egypt",
-        population: "300 million",
+        // population: "300 million",
         language: "Arabic",
         origin: "1922",
         capitol: "Cairo",
