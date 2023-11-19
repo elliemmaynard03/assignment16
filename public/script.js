@@ -142,7 +142,6 @@ const addEditCountry = async(e) => {
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
     let response;
-    form._id = "-1";
     formData.append("funfacts", getFunfacts());
   
     if (form._id.value === "-1") {
@@ -219,6 +218,7 @@ const showHideAdd = (e) => {
     document.querySelector(".dialog").classList.remove("transparent");
     document.querySelector(".dialog").classList.add("animation");
     document.getElementById("add-edit-title").innerHTML = "Add Country";
+    console.log("hi");
     resetForm();
 };
 
