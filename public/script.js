@@ -119,7 +119,6 @@ const populateEditForm = (country) => {
     form.origin.value = country.origin;
     form.capitol.value = country.capitol;
     form.president.value = country.president;
-    form.funfacts.value = country.funfacts;
     populateFunfact(country)
 };
 
