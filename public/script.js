@@ -133,7 +133,7 @@ const populateFunfact = (country) => {
     });
 }
 
-const addEditCountry = async(e) => {
+const addEditCountry = async(e, country) => {
     e.preventDefault();
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
