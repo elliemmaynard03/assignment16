@@ -142,6 +142,7 @@ const addEditCountry = async(e) => {
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
     let response;
+    form._id = "-1";
     formData.append("funfacts", getFunfacts());
   
     if (form._id.value === "-1") {
