@@ -155,7 +155,7 @@ const addEditCountry = async(e) => {
     else {
         console.log(...formData);
 
-        response = await fetch(`https://countries-updated.onrender.com/api/countries/${form._id.value}`, {
+        response = await fetch(`/api/countries/${form._id.value}`, {
             method: "PUT",
             body: formData
         });
