@@ -12,9 +12,6 @@ app.use(cors({
     origin: 'https://countries-updated.onrender.com'
   }));
 
-app.use(cors({
-    origin: '/api/countries'
-  }));
 
 const upload = multer({ dest: __dirname + "/public/images" });
 
