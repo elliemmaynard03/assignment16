@@ -111,15 +111,20 @@ const deleteCountry = async(country) => {
 }
 const populateEditForm = (country) => {
     const form = document.getElementById("add-edit-country-form");
-    form._id.value = country._id;
-    form.name.value = country.name;
-    form.population.value = country.population;
-    form.language.value = country.language;
-    form.origin.value = country.origin;
-    form.capitol.value = country.capitol;
-    form.president.value = country.president;
-    form.funfacts.value = country.funfacts;
-    populateFunfact(country)
+
+    if (form) {
+        form._id.value = country._id || '';
+        form.name.value = country.name || '';
+        form.population.value = country.population || '';
+        form.language.value = country.language || '';
+        form.origin.value = country.origin || '';
+        form.capitol.value = country.capitol || '';
+        form.president.value = country.president || '';
+
+        populateFunfact(country);
+    } else {
+        console.error("Form element not found.");
+    }
 };
 
 const populateFunfact = (country) => {
