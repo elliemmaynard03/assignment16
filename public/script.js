@@ -152,14 +152,14 @@ const addEditCountry = async(e) => {
             body: formData
         });
     } 
-    else {
-        console.log(...formData);
+    // else {
+    //     console.log(...formData);
 
-        response = await fetch(`https://countries-updated.onrender.com/api/countries/${form._id.value}`, {
-            method: "PUT",
-            body: formData
-        });
-    }
+    //     response = await fetch(`https://countries-updated.onrender.com/api/countries/${form._id.value}`, {
+    //         method: "PUT",
+    //         body: formData
+    //     });
+    // }
 
     //successfully got data from server
     if (response.status != 200) {
