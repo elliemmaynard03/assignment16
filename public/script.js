@@ -142,10 +142,13 @@ const addEditCountry = async(e) => {
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
     let response;
-    formData.append("funfacts", getFunfacts());
   
     if (form._id.value == -1) {
         formData.delete("_id");
+        formData.delete("img");
+        formData.append("funfacts", getFunfacts());
+
+        console.log(...formData);
     
         response = await fetch("https://countries-updated.onrender.com/api/countries", {
             method: "POST",
