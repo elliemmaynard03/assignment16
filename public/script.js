@@ -92,7 +92,7 @@ const displayDetails = (country) => {
 };
 
 const deleteCountry = async(country) => {
-    let response = await fetch(`/api/countries/${country._id}`, {
+    let response = await fetch(`https://countries-updated.onrender.com${country._id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json;charset=utf-8"
@@ -151,7 +151,7 @@ const addEditCountry = async(e) => {
     else {
         console.log(...formData);
 
-        response = await fetch(`/api/countries/${form._id.value}`, {
+        response = await fetch(`https://countries-updated.onrender.com${form._id.value}`, {
             method: "PUT",
             body: formData
         });
