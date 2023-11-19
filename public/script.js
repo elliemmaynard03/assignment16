@@ -48,6 +48,10 @@ const displayDetails = (country) => {
     countryDetails.append(eLink);
     eLink.id = "edit-link";
 
+    const population = document.createElement("p");
+    countryDetails.append(population);
+    population.innerHTML = "Population: "+country.population;
+
     const language = document.createElement("p");
     countryDetails.append(language);
     language.innerHTML = "Language: "+country.language;
