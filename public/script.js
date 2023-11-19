@@ -128,7 +128,6 @@ const populateEditForm = (country) => {
 
 const populateFunfact = (country) => {
     const section = document.getElementById("funfact-boxes");
-    section.innerHTML = "";
 
     country.funfacts.forEach((funfact) => {
         const input = document.createElement("input");
@@ -143,10 +142,10 @@ const addEditCountry = async(e) => {
     const form = document.getElementById("add-edit-country-form");
     const formData = new FormData(form);
     let response;
+    formData.append("funfacts", getFunfacts());
   
     if (form._id.value === "-1") {
         formData.delete("_id");
-        formData.append("funfacts", getFunfacts());
 
         response = await fetch("https://countries-updated.onrender.com/api/countries", {
             method: "POST",
